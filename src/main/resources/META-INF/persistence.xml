@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             version="1.0">
+  <persistence-unit name="game" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>org.example.model.AbilityCard</class>
+    <class>org.example.model.AbilityCardInstance</class>
+    <class>org.example.model.Card</class>
+    <class>org.example.model.CardInstance</class>
+    <class>org.example.model.HeroCard</class>
+    <class>org.example.model.HeroCardInstance</class>
+    <class>org.example.model.LeaderCard</class>
+    <class>org.example.model.LeaderCardInstance</class>
+    <class>org.example.model.Player</class>
+    <class>org.example.model.UnitCard</class>
+    <class>org.example.model.UnitCardInstance</class>
+    <properties>
+      <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+      <property name="hibernate.connection.password" value=""/>
+      <property name="hibernate.connection.url" value="jdbc:h2:mem:example"/>
+      <property name="hibernate.connection.username" value="sa"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+      <property name="hibernate.format_sql" value="false"/>
+      <property name="hibernate.hbm2ddl.auto" value="create"/>
+      <property name="hibernate.show_sql" value="false"/>
+    </properties>
+  </persistence-unit>
+</persistence>
